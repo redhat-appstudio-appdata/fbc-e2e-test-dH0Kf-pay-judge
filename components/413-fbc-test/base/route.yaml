@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: 413-fbc-test
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: 413-fbc-test
+    app.kubernetes.io/part-of: fbc-e2e-test
+  name: 413-fbc-test
+  namespace: dev-release-team-tenant
+spec:
+  port:
+    targetPort: 50051
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: 413-fbc-test
+    weight: 100
+status: {}
