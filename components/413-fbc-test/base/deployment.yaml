@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: 413-fbc-test
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:dev-release-team-tenant-413-fbc-test
+      - image: quay.io/redhat-appstudio/user-workload@sha256:5e2b2606689556c7e21bc02afb1ca779d825890857dbee616453f5a8d25875b6
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
