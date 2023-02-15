@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: 413-fbc-test
+  namespace: dev-release-team-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:5e2b2606689556c7e21bc02afb1ca779d825890857dbee616453f5a8d25875b6
+        name: container-image
+        resources: {}
+status: {}
