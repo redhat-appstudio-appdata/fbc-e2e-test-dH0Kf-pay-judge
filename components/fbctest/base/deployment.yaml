@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: fbctest
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:dH0Kf-fbctest
+      - image: quay.io/redhat-appstudio/user-workload@sha256:29ff42fa516d503648912e5999769c22750f2ae7385bec6397525e4260e06586
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
