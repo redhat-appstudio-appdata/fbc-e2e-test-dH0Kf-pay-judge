@@ -1,0 +1,15 @@
+apiVersion: pipelinesascode.tekton.dev/v1alpha1
+kind: Repository
+metadata:
+  annotations:
+    appstudio.openshift.io/application: fbc-e2e-test
+    appstudio.openshift.io/component: fbctest
+    build.appstudio.openshift.io/build: "true"
+    build.appstudio.openshift.io/type: build
+    build.appstudio.openshift.io/version: "0.1"
+    pipelines.appstudio.openshift.io/type: build
+  creationTimestamp: null
+  name: fbctest
+  namespace: dev-release-team-tenant
+spec:
+  url: https://github.com/hacbs-release/fbc-test
